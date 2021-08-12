@@ -1,0 +1,1 @@
+Example using the Vector API to implement a vectorized version of Arrays.hashCode.
