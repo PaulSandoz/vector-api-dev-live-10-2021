@@ -275,4 +275,17 @@ Hot loop:
          ││  0x000000011a1dff84:   cmp    %r11d,%r8d                // next 8 bytes
          ╰│  0x000000011a1dff87:   jl     0x000000011a1dff50        //
 
+Loop unrolling can make it harder to identify the hot loop, turning it off is
+sometimes useful.
+
+Printing assembly requires the hsdis [1] library be accessible to the java
+executable. On Mac with SIP enabled:
+- the easiest approach is to place the hsdis library in the current working
+  directory where "java" is executed; or
+- set up the library path and refer to the full path of the java executable
+  directly
+
+[1] https://github.com/openjdk/jdk/blob/master/src/utils/hsdis/README
+    https://github.com/AdoptOpenJDK/jitwatch/wiki/Building-hsdis
+
  */
